@@ -95,7 +95,7 @@ public class FitsFileUpdateImpl implements FitsFileUpdate {
         logger.debug("update()");
         Fits f;
         try {
-            sleep(1000); //to ensure that file is fully created before updating it
+            sleep(2000); //to ensure that file is fully created before updating it
             f = new Fits(fileName);
             f.read();
             Header hdr = f.getHDU(0).getHeader();
